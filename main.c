@@ -81,13 +81,15 @@ int main(void) {
 
                 display_secretCode(codeInputByPlayer); // Affichage de sa proposition 
                 printf("\n");
-                display_secretCode(secretCode);
+                // display_secretCode(secretCode);
 
-                if (difficulty == 1) {
-                    display_result_V1(secretCode, codeInputByPlayer);
-                } else {
-                    display_result_V2(secretCode, codeInputByPlayer);
-                }
+                if (are_codes_equal(secretCode, codeInputByPlayer) == 0) {
+                    if (difficulty == 1) {
+                        display_result_V1(secretCode, codeInputByPlayer);
+                    } else {
+                        display_result_V2(secretCode, codeInputByPlayer);
+                    }
+                } 
 
                 printf("\n");
 
@@ -282,6 +284,7 @@ void display_statistics(int nbParties, int largestValue, int smallestValue, floa
 
 
 /* Améliorations
+- design
 - gestion des saisies
 - lien vers GitHub
 */
