@@ -124,7 +124,7 @@ int main(void) {
 int are_codes_equal(int secretCode[], int codeInputByPlayer[]) {
     int areCodesEqual = 1;
     int i = 0;
-    while (areCodesEqual == 1 && (i < NB_DIGITS)) {
+    while (areCodesEqual == 1 && i < NB_DIGITS) {
         if (secretCode[i] != codeInputByPlayer[i]) {
             areCodesEqual = 0;
         }
